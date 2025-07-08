@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* GOV.UK inspired dark theme for engineering portfolio */
+    --background: 220 13% 9%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 13% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 13% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    /* GOV.UK blue adapted for dark theme */
+    --primary: 212 100% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 13% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    /* Teal accent for engineering feel */
+    --accent: 178 100% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 20%;
+    --input: 220 13% 15%;
+    --ring: 212 100% 47%;
+
+    --radius: 0.25rem;
+
+    /* Engineering-specific colors */
+    --success: 120 100% 35%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 45 100% 55%;
+    --warning-foreground: 0 0% 0%;
+
+    /* Header styling like GOV.UK */
+    --header-bg: 212 100% 47%;
+    --header-text: 0 0% 100%;
+    
+    /* Content sections */
+    --section-bg: 220 13% 11%;
+    --section-border: 220 13% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
