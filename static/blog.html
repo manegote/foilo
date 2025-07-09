@@ -1,276 +1,404 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog - Electronics Engineering Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Header -->
     <header class="header">
-        <div class="header-container">
-            <div class="header-top">
-                <a href="index.html" class="logo">
-                    <div class="logo-icon">EE</div>
-                    <span class="logo-text">Electronics Engineering</span>
-                </a>
-                <button class="mobile-menu" aria-label="Menu">
-                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
-                    <li><a href="projects.html" class="nav-link">Projects</a></li>
-                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+      <div class="header-container">
+        <div class="header-top">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">EE</div>
+            <span class="logo-text">Electronics Engineering</span>
+          </a>
+          <button class="mobile-menu" aria-label="Menu">
+            <svg
+              class="icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
         </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="blog.html" class="nav-link active">Blog</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Breadcrumb -->
-        <nav class="breadcrumb">
-            <a href="index.html">Home</a> / <span>Blog</span>
-        </nav>
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a> / <span>Blog</span>
+      </nav>
 
-        <div class="page-content">
-            <h1 class="page-title">Blog Posts</h1>
-            <p class="page-description">
-                Technical articles, project documentation, and lessons learned from electronics engineering projects.
-            </p>
+      <div class="page-content">
+        <h1 class="page-title">Blog Posts</h1>
+        <p class="page-description">
+          Technical articles, project documentation, and lessons learned from
+          electronics engineering projects.
+        </p>
 
-            <!-- Search and Filters -->
-            <div class="filter-section">
-                <div class="filter-header">
-                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.414A1 1 0 013 6.707V4z"></path>
-                    </svg>
-                    <span>Filter Posts</span>
-                </div>
+        <!-- Search and Filters -->
+        <div class="filter-section">
+          <div class="filter-header">
+            <svg
+              class="icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.414A1 1 0 013 6.707V4z"
+              ></path>
+            </svg>
+            <span>Filter Posts</span>
+          </div>
 
-                <div class="filter-grid">
-                    <div class="filter-item">
-                        <label for="search">Search</label>
-                        <div class="search-input">
-                            <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                            </svg>
-                            <input type="search" id="search" placeholder="Search posts..." class="form-input">
-                        </div>
-                    </div>
-
-                    <div class="filter-item">
-                        <label for="category">Category</label>
-                        <select id="category" class="form-select">
-                            <option value="">All Categories</option>
-                            <option value="Tool">Tool</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-item">
-                        <label for="tag">Tag</label>
-                        <select id="tag" class="form-select">
-                            <option value="">All Tags</option>
-                            <option value="Battery">Battery</option>
-                            <option value="Testing">Testing</option>
-                            <option value="Arduino">Arduino</option>
-                            <option value="PCB">PCB</option>
-                            <option value="Safety">Safety</option>
-                            <option value="Welding">Welding</option>
-                            <option value="Assembly">Assembly</option>
-                            <option value="Reflow">Reflow</option>
-                            <option value="SMD">SMD</option>
-                            <option value="Temperature">Temperature</option>
-                        </select>
-                    </div>
-                </div>
+          <div class="filter-grid">
+            <div class="filter-item">
+              <label for="search">Search</label>
+              <div class="search-input">
+                <svg
+                  class="search-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+                <input
+                  type="search"
+                  id="search"
+                  placeholder="Search posts..."
+                  class="form-input"
+                />
+              </div>
             </div>
 
-            <!-- Blog Posts Grid -->
-            <div class="blog-grid">
-                <a href="blog-post.html?id=building-lithium-pack-tester" class="blog-card" data-category="Tool">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop" alt="Building a Custom Lithium Battery Pack Load Tester" class="blog-image">
-                    <div class="blog-content">
-                        <h2 class="blog-title">
-                            Building a Custom Lithium Battery Pack Load Tester
-                        </h2>
-                        <p class="blog-summary">Designing and constructing a programmable load tester for safely discharging lithium battery packs to storage voltage before long-term storage.</p>
-
-                        <div class="blog-meta">
-                            <div class="blog-meta-info">
-                                <div class="meta-item">
-                                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                    </svg>
-                                    <span>2024-01-15</span>
-                                </div>
-                                <div class="meta-item">
-                                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span>8 min read</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="blog-tags">
-                            <button class="tag" data-tag="Battery">#Battery</button>
-                            <button class="tag" data-tag="Testing">#Testing</button>
-                            <button class="tag" data-tag="Arduino">#Arduino</button>
-                        </div>
-
-                        <div class="blog-link-container">
-                            <a href="blog-post.html?id=building-lithium-pack-tester" class="blog-link">Read Full Article →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="blog-card" data-category="Tool">
-                    <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&h=600&fit=crop" alt="DIY Spot Welder Controller for Battery Pack Assembly" class="blog-image">
-                    <div class="blog-content">
-                        <h2 class="blog-title">
-                            <a href="blog-post.html?id=spot-welder-controller">DIY Spot Welder Controller for Battery Pack Assembly</a>
-                        </h2>
-                        <p class="blog-summary">Creating a precision timing controller for a microwave transformer-based spot welder to reliably join nickel strips in battery pack construction.</p>
-
-                        <div class="blog-meta">
-                            <div class="blog-meta-info">
-                                <div class="meta-item">
-                                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                    </svg>
-                                    <span>2024-01-08</span>
-                                </div>
-                                <div class="meta-item">
-                                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span>6 min read</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="blog-tags">
-                            <button class="tag" data-tag="Welding">#Welding</button>
-                            <button class="tag" data-tag="Battery">#Battery</button>
-                            <button class="tag" data-tag="Arduino">#Arduino</button>
-                        </div>
-
-                        <div class="blog-link-container">
-                            <a href="blog-post.html?id=spot-welder-controller" class="blog-link">Read Full Article →</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="blog-card" data-category="Tool">
-                    <img src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&h=600&fit=crop" alt="Converting a Toaster Oven into a SMD Reflow Oven" class="blog-image">
-                    <div class="blog-content">
-                        <h2 class="blog-title">
-                            <a href="blog-post.html?id=reflow-oven-build">Converting a Toaster Oven into a SMD Reflow Oven</a>
-                        </h2>
-                        <p class="blog-summary">Step-by-step conversion of a standard toaster oven into a precision reflow oven for surface-mount PCB assembly with PID temperature control.</p>
-
-                        <div class="blog-meta">
-                            <div class="blog-meta-info">
-                                <div class="meta-item">
-                                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                    </svg>
-                                    <span>2023-12-22</span>
-                                </div>
-                                <div class="meta-item">
-                                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <span>10 min read</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="blog-tags">
-                            <button class="tag" data-tag="Reflow">#Reflow</button>
-                            <button class="tag" data-tag="SMD">#SMD</button>
-                            <button class="tag" data-tag="Arduino">#Arduino</button>
-                        </div>
-
-                        <div class="blog-link-container">
-                            <a href="blog-post.html?id=reflow-oven-build" class="blog-link">Read Full Article →</a>
-                        </div>
-                    </div>
-                </article>
+            <div class="filter-item">
+              <label for="category">Category</label>
+              <select id="category" class="form-select">
+                <option value="">All Categories</option>
+                <option value="Tool">Tool</option>
+              </select>
             </div>
 
-            <!-- Summary Stats -->
-            <div class="stats-section">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">Total Posts</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">1</div>
-                        <div class="stat-label">Categories</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">Currently Showing</div>
-                    </div>
-                </div>
+            <div class="filter-item">
+              <label for="tag">Tag</label>
+              <select id="tag" class="form-select">
+                <option value="">All Tags</option>
+                <option value="Battery">Battery</option>
+                <option value="Testing">Testing</option>
+                <option value="Arduino">Arduino</option>
+                <option value="PCB">PCB</option>
+                <option value="Safety">Safety</option>
+                <option value="Welding">Welding</option>
+                <option value="Assembly">Assembly</option>
+                <option value="Reflow">Reflow</option>
+                <option value="SMD">SMD</option>
+                <option value="Temperature">Temperature</option>
+              </select>
             </div>
+          </div>
         </div>
+
+        <!-- Blog Posts Grid -->
+        <div class="blog-grid">
+          <!-- Load Tester Blog Post -->
+          <a
+            href="blog-post.html?id=building-lithium-pack-tester"
+            class="blog-card"
+            data-category="Tool"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop"
+              alt="Building a Custom Lithium Battery Pack Load Tester"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h2 class="blog-title">
+                Building a Custom Lithium Battery Pack Load Tester
+              </h2>
+              <p class="blog-summary">
+                Designing and constructing a programmable load tester for safely
+                discharging lithium battery packs to storage voltage before
+                long-term storage.
+              </p>
+
+              <div class="blog-meta">
+                <div class="blog-meta-info">
+                  <div class="meta-item">
+                    <svg
+                      class="icon"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      ></path>
+                    </svg>
+                    <span>2024-01-15</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg
+                      class="icon"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                    <span>8 min read</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-tags">
+                <button class="tag" data-tag="Battery">#Battery</button>
+                <button class="tag" data-tag="Testing">#Testing</button>
+                <button class="tag" data-tag="Arduino">#Arduino</button>
+              </div>
+            </div>
+          </a>
+
+          <!-- Spot Welder Blog Post -->
+          <a
+            href="blog-post.html?id=spot-welder-controller"
+            class="blog-card"
+            data-category="Tool"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&h=600&fit=crop"
+              alt="DIY Spot Welder Controller for Battery Pack Assembly"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h2 class="blog-title">
+                DIY Spot Welder Controller for Battery Pack Assembly
+              </h2>
+              <p class="blog-summary">
+                Creating a precision timing controller for a microwave
+                transformer-based spot welder to reliably join nickel strips in
+                battery pack construction.
+              </p>
+
+              <div class="blog-meta">
+                <div class="blog-meta-info">
+                  <div class="meta-item">
+                    <svg
+                      class="icon"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      ></path>
+                    </svg>
+                    <span>2024-01-08</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg
+                      class="icon"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                    <span>6 min read</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-tags">
+                <button class="tag" data-tag="Welding">#Welding</button>
+                <button class="tag" data-tag="Battery">#Battery</button>
+                <button class="tag" data-tag="Arduino">#Arduino</button>
+              </div>
+            </div>
+          </a>
+
+          <!-- Reflow Oven Blog Post -->
+          <a
+            href="blog-post.html?id=reflow-oven-build"
+            class="blog-card"
+            data-category="Tool"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&h=600&fit=crop"
+              alt="Converting a Toaster Oven into a SMD Reflow Oven"
+              class="blog-image"
+            />
+            <div class="blog-content">
+              <h2 class="blog-title">
+                Converting a Toaster Oven into a SMD Reflow Oven
+              </h2>
+              <p class="blog-summary">
+                Step-by-step conversion of a standard toaster oven into a
+                precision reflow oven for surface-mount PCB assembly with PID
+                temperature control.
+              </p>
+
+              <div class="blog-meta">
+                <div class="blog-meta-info">
+                  <div class="meta-item">
+                    <svg
+                      class="icon"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      ></path>
+                    </svg>
+                    <span>2023-12-22</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg
+                      class="icon"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                    <span>10 min read</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-tags">
+                <button class="tag" data-tag="Reflow">#Reflow</button>
+                <button class="tag" data-tag="SMD">#SMD</button>
+                <button class="tag" data-tag="Arduino">#Arduino</button>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Summary Stats -->
+        <div class="stats-section">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">3</div>
+              <div class="stat-label">Total Posts</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">1</div>
+              <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">3</div>
+              <div class="stat-label">Currently Showing</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3 class="footer-title">Electronics Engineering</h3>
-                    <p class="footer-description">
-                        Designing and building lithium-ion battery packs, PCBs, custom tools,
-                        and electronics projects. Documenting the journey from concept to creation.
-                    </p>
-                </div>
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3 class="footer-title">Electronics Engineering</h3>
+            <p class="footer-description">
+              Designing and building lithium-ion battery packs, PCBs, custom
+              tools, and electronics projects. Documenting the journey from
+              concept to creation.
+            </p>
+          </div>
 
-                <div class="footer-section">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="blog.html">Blog Posts</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About</a></li>
-                    </ul>
-                </div>
+          <div class="footer-section">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="blog.html">Blog Posts</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
 
-                <div class="footer-section">
-                    <h4 class="footer-heading">Technologies</h4>
-                    <ul class="footer-tech">
-                        <li>Lithium-ion Battery Design</li>
-                        <li>PCB Design & Manufacturing</li>
-                        <li>3D Modeling & Printing</li>
-                        <li>Reflow Oven Construction</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p class="footer-copyright">
-                    © 2024 Electronics Engineering Portfolio. Built for showcasing hardware projects.
-                </p>
-            </div>
+          <div class="footer-section">
+            <h4 class="footer-heading">Technologies</h4>
+            <ul class="footer-tech">
+              <li>Lithium-ion Battery Design</li>
+              <li>PCB Design & Manufacturing</li>
+              <li>3D Modeling & Printing</li>
+              <li>Reflow Oven Construction</li>
+            </ul>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            © 2024 Electronics Engineering Portfolio. Built for showcasing
+            hardware projects.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
     <script src="blog.js"></script>
-</body>
+  </body>
 </html>
