@@ -91,16 +91,17 @@ body {
   left: 0;
   right: 0;
   z-index: 50;
-  background-color: var(--header-bg);
-  border-bottom: 4px solid var(--accent);
+  background-color: hsla(212, 100%, 47%, 0.95);
+  border-bottom: 4px solid hsla(178, 100%, 40%, 0.8);
   transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
 }
 
 .header.scrolled {
-  background-color: hsla(212, 100%, 47%, 0.8);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid hsla(178, 100%, 40%, 0.3);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  background-color: hsla(212, 100%, 47%, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid hsla(178, 100%, 40%, 0.4);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
 }
 
 .header-container {
