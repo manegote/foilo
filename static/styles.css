@@ -1599,9 +1599,11 @@ p {
 }
 
 .sidebar-section {
-  border: 1px solid var(--border);
+  border: 1px solid hsla(220, 13%, 20%, 0.8);
   padding: 1.5rem;
   border-radius: var(--radius);
+  background-color: hsla(220, 13%, 11%, 0.6);
+  backdrop-filter: blur(4px);
 }
 
 .sidebar-title {
