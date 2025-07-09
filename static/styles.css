@@ -482,6 +482,9 @@ p {
   border: 1px solid;
   font-weight: 500;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .badge-success {
@@ -502,6 +505,11 @@ p {
 .badge-muted {
   border-color: var(--muted);
   color: var(--muted-foreground);
+}
+
+.badge-icon {
+  width: 0.75rem;
+  height: 0.75rem;
 }
 
 /* Footer */
