@@ -370,7 +370,14 @@ p {
 /* Cards */
 .service-card {
   padding: 1.5rem;
-  space-y: 1rem;
+  background-color: hsla(220, 13%, 11%, 0.6);
+  border: 1px solid hsla(220, 13%, 20%, 0.8);
+  transition: all 0.2s ease;
+}
+
+.service-card:hover {
+  background-color: hsla(220, 13%, 11%, 0.9);
+  border-color: hsla(220, 13%, 20%, 1);
 }
 
 .service-title {
