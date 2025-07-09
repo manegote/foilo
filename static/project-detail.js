@@ -12,6 +12,7 @@ const projectsData = {
     tags: ["Business", "Battery", "Manufacturing", "Custom"],
     coverImage:
       "https://images.unsplash.com/photo-1609392553633-ba5e73b09cca?w=800&h=600&fit=crop",
+    readingTime: 12,
     images: [
       "https://images.unsplash.com/photo-1609392553633-ba5e73b09cca?w=800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop",
@@ -89,6 +90,7 @@ Infrastructure projects are underway. The load tester and spot welder are comple
     tags: ["Battery", "Testing", "Arduino", "Safety"],
     coverImage:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop",
+    readingTime: 8,
     images: [
       "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
@@ -174,6 +176,7 @@ This tool has become essential for proper pack storage and customer validation t
     tags: ["Welding", "Battery", "Arduino", "Assembly"],
     coverImage:
       "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&h=600&fit=crop",
+    readingTime: 6,
     images: [
       "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop",
@@ -257,6 +260,7 @@ This tool enables reliable, professional-quality battery pack assembly at a frac
     tags: ["3D Print", "Design", "Mechanical", "Battery"],
     coverImage:
       "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&h=600&fit=crop",
+    readingTime: 5,
     images: [
       "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&h=600&fit=crop",
     ],
@@ -341,6 +345,7 @@ Next steps include finalizing connection details and developing a complete compo
     tags: ["Reflow", "SMD", "Arduino", "Temperature"],
     coverImage:
       "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&h=600&fit=crop",
+    readingTime: 10,
     images: [
       "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop",
