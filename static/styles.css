@@ -1476,6 +1476,8 @@ p {
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--foreground);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .help-list {
