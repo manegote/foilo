@@ -477,6 +477,10 @@ function populateProjectDetail(project) {
     );
   }
 
+  // Update reading time
+  document.getElementById("project-reading-time").textContent =
+    `${project.readingTime} min read`;
+
   // Update tags
   const tagsContainer = document.getElementById("project-tags");
   tagsContainer.innerHTML = "";
