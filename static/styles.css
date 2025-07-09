@@ -1411,6 +1411,15 @@ p {
   gap: 2rem;
 }
 
+.contact-info-centered {
+  max-width: 64rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
 .info-title {
   font-size: 1.5rem;
   font-weight: 700;
