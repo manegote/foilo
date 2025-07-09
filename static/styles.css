@@ -669,10 +669,11 @@ p {
 
 /* Filter Section */
 .filter-section {
-  border: 1px solid var(--border);
+  border: 1px solid hsla(220, 13%, 20%, 0.8);
   padding: 1.5rem;
   margin-bottom: 2rem;
-  background-color: var(--section-bg);
+  background-color: hsla(220, 13%, 11%, 0.6);
+  backdrop-filter: blur(8px);
 }
 
 .filter-header {
