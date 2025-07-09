@@ -418,6 +418,18 @@ p {
   color: var(--foreground);
 }
 
+.project-title a,
+.blog-title a {
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.project-title a:hover,
+.blog-title a:hover {
+  color: var(--foreground);
+  text-decoration: none;
+}
+
 .project-description,
 .blog-summary {
   color: var(--muted-foreground);
