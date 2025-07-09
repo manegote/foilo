@@ -277,6 +277,7 @@ p {
   font-size: 1.875rem;
   font-weight: 700;
   margin-bottom: 0;
+  color: var(--foreground);
 }
 
 /* Hero Section */
