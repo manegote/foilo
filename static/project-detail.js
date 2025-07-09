@@ -595,35 +595,87 @@ function showRelatedProjects(project) {
   const relatedSection = document.getElementById("related-projects-section");
   const relatedContainer = document.getElementById("related-projects");
 
+  // Only show if there are actually related projects
+  let hasRelated = false;
+
+  // Show parent project if it exists
+  if (project.parentProject && projectsData[project.parentProject]) {
+    hasRelated = true;
+  }
+
+  // Show subprojects if they exist
+  if (project.subprojects && project.subprojects.length > 0) {
+    hasRelated = true;
+  }
+
+  if (!hasRelated) return;
+
   relatedSection.style.display = "block";
   relatedContainer.innerHTML = "";
 
-  // Show parent project
+  // Add section for parent project
   if (project.parentProject && projectsData[project.parentProject]) {
     const parentProject = projectsData[project.parentProject];
-    addRelatedProject(relatedContainer, parentProject, "Parent Project");
+
+    const parentSection = document.createElement("div");
+    parentSection.innerHTML = `
+            <h4 style="font-size: 0.875rem; font-weight: 600; color: var(--foreground); margin-bottom: 0.5rem;">Parent Project</h4>
+        `;
+    relatedContainer.appendChild(parentSection);
+
+    addRelatedProject(relatedContainer, parentProject);
   }
 
-  // Show subprojects
-  if (project.subprojects) {
+  // Add section for subprojects
+  if (project.subprojects && project.subprojects.length > 0) {
+    const subprojectsSection = document.createElement("div");
+    subprojectsSection.innerHTML = `
+            <h4 style="font-size: 0.875rem; font-weight: 600; color: var(--foreground); margin-bottom: 0.5rem; margin-top: 1.5rem;">Required Infrastructure</h4>
+        `;
+    relatedContainer.appendChild(subprojectsSection);
+
     project.subprojects.forEach((subprojectId) => {
       if (projectsData[subprojectId]) {
         const subproject = projectsData[subprojectId];
-        addRelatedProject(relatedContainer, subproject, "Subproject");
+        addRelatedProject(relatedContainer, subproject);
       }
     });
   }
 }
 
-function addRelatedProject(container, project, relationship) {
+function addRelatedProject(container, project) {
   const projectElement = document.createElement("a");
   projectElement.href = `project-detail.html?id=${project.id}`;
   projectElement.className = "related-project-item";
 
+  // Get status icon
+  let statusIcon = "";
+  let statusClass = "";
+  switch (project.status) {
+    case "completed":
+      statusIcon =
+        '<svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+      statusClass = "badge-success";
+      break;
+    case "in-progress":
+      statusIcon =
+        '<svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+      statusClass = "badge-accent";
+      break;
+    default:
+      statusIcon =
+        '<svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+      statusClass = "badge-muted";
+  }
+
   projectElement.innerHTML = `
         <div class="related-project-title">${project.title}</div>
         <div class="related-project-description">${project.description}</div>
-        <div class="related-project-relationship" style="font-size: 0.75rem; color: var(--accent); margin-top: 0.5rem;">${relationship}</div>
+        <div style="margin-top: 0.75rem;">
+            <span class="badge ${statusClass}" style="font-size: 0.625rem; padding: 0.125rem 0.375rem;">
+                ${statusIcon}${project.status.replace("-", " ").toUpperCase()}
+            </span>
+        </div>
     `;
 
   container.appendChild(projectElement);
