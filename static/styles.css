@@ -229,6 +229,20 @@ h3 {
   margin-bottom: 1rem;
 }
 
+/* Special spacing for first elements */
+.main > *:first-child,
+.about-content > *:first-child,
+.contact-content > *:first-child,
+.page-content > *:first-child {
+  margin-top: 0;
+}
+
+/* Section spacing within content areas */
+.about-section h2:first-child,
+.contact-info-centered h2:first-child {
+  margin-top: 0;
+}
+
 p {
   margin-bottom: 1.5rem;
   color: var(--muted-foreground);
