@@ -450,9 +450,11 @@ function populateProjectDetail(project) {
   document.getElementById("project-description").textContent =
     project.description;
 
-  // Update status with appropriate badge class
+  // Update status with appropriate badge class and icon
   const statusElement = document.getElementById("project-status");
-  statusElement.textContent = project.status.replace("-", " ").toUpperCase();
+  statusElement.innerHTML =
+    getStatusIcon(project.status) +
+    project.status.replace("-", " ").toUpperCase();
   statusElement.className = `badge badge-${getStatusClass(project.status)}`;
 
   // Update category
