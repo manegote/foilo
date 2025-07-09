@@ -961,13 +961,16 @@ p {
 
 .gallery-item {
   position: relative;
-  border: 1px solid var(--border);
+  border: 1px solid hsla(220, 13%, 20%, 0.6);
   transition: all 0.2s ease;
   cursor: pointer;
+  background-color: hsla(220, 13%, 11%, 0.3);
+  backdrop-filter: blur(2px);
 }
 
 .gallery-item:hover {
-  background-color: var(--card);
+  background-color: hsla(220, 13%, 11%, 0.7);
+  border-color: hsla(220, 13%, 20%, 0.9);
 }
 
 .gallery-image {
