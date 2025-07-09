@@ -41,6 +41,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setActiveNavLink();
 
+  // Add status icons to badges on homepage
+  function addStatusIcons() {
+    document.querySelectorAll(".badge").forEach((badge) => {
+      const text = badge.textContent.trim();
+      let icon = "";
+
+      if (text === "COMPLETED") {
+        icon =
+          '<svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+      } else if (text === "IN PROGRESS") {
+        icon =
+          '<svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+      } else if (text === "PLANNING") {
+        icon =
+          '<svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+      } else if (text === "PAUSED") {
+        icon =
+          '<svg class="badge-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+      }
+
+      if (icon) {
+        badge.innerHTML = icon + text;
+      }
+    });
+  }
+
+  // Add icons to badges if on homepage
+  if (
+    window.location.pathname.split("/").pop() === "index.html" ||
+    window.location.pathname === "/"
+  ) {
+    addStatusIcons();
+  }
+
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
