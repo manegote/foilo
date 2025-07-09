@@ -933,12 +933,12 @@ p {
 .gallery-item {
   position: relative;
   border: 1px solid var(--border);
-  transition: border-color 0.2s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .gallery-item:hover {
-  border-color: var(--accent);
+  background-color: var(--card);
 }
 
 .gallery-image {
