@@ -1194,17 +1194,20 @@ p {
 .approach-item {
   border-left: 4px solid var(--accent);
   padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .approach-title {
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--foreground);
-  margin-bottom: 0.5rem;
 }
 
 .approach-text {
   color: var(--muted-foreground);
+  line-height: 1.6;
 }
 
 .goals-content {
