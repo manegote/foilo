@@ -398,7 +398,6 @@ p {
 .project-card:hover,
 .blog-card:hover {
   background-color: var(--card);
-  border-color: var(--accent);
 }
 
 .project-image,
