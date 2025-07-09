@@ -388,12 +388,17 @@ p {
 .project-card,
 .blog-card {
   border: 1px solid var(--border);
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .project-card:hover,
 .blog-card:hover {
   background-color: var(--card);
+  border-color: var(--accent);
 }
 
 .project-image,
