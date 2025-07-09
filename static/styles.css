@@ -1253,6 +1253,7 @@ p {
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--foreground);
+  margin-bottom: 0.75rem;
 }
 
 .approach-text {
