@@ -401,17 +401,20 @@ p {
 
 .project-card,
 .blog-card {
-  border: 1px solid var(--border);
+  border: 1px solid hsla(220, 13%, 20%, 0.8);
   transition: all 0.2s ease;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
   display: block;
+  background-color: hsla(220, 13%, 11%, 0.4);
+  backdrop-filter: blur(4px);
 }
 
 .project-card:hover,
 .blog-card:hover {
-  background-color: var(--card);
+  background-color: hsla(220, 13%, 11%, 0.7);
+  border-color: hsla(220, 13%, 20%, 1);
 }
 
 .project-image,
