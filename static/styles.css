@@ -1177,10 +1177,12 @@ p {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--foreground);
+  margin-bottom: 0.5rem;
 }
 
 .service-text {
   color: var(--muted-foreground);
+  line-height: 1.6;
 }
 
 .approach-list {
