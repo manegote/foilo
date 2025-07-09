@@ -284,7 +284,12 @@ p {
 /* Hero Section */
 .hero {
   padding: 4rem 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid hsla(220, 13%, 20%, 0.6);
+  background: linear-gradient(
+    135deg,
+    hsla(220, 13%, 9%, 0.95) 0%,
+    hsla(220, 13%, 11%, 0.9) 100%
+  );
 }
 
 .hero-content {
