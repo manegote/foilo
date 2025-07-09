@@ -135,6 +135,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Make gallery items clickable to open modal
+  document.addEventListener("click", function (e) {
+    const galleryItem = e.target.closest(".gallery-item");
+    if (galleryItem) {
+      const imageId = galleryItem.dataset.imageId;
+      if (imageId) {
+        openModal(imageId);
+      }
+    }
+  });
+
   console.log("Gallery page functionality loaded");
 });
 
