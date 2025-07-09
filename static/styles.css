@@ -527,9 +527,10 @@ p {
 
 /* Footer */
 .footer {
-  background-color: var(--card);
-  border-top: 1px solid var(--border);
+  background-color: hsla(220, 13%, 11%, 0.95);
+  border-top: 1px solid hsla(220, 13%, 20%, 0.6);
   margin-top: 4rem;
+  backdrop-filter: blur(8px);
 }
 
 .footer-container {
